@@ -1,0 +1,17 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /client-b
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: client2
+      clientSecret: secret2
+      accessTokenUri: http://localhost:8081/auth/oauth/token
+      userAuthorizationUri: http://localhost:8081/auth/oauth/authorize
+
+    resource:
+      userInfoUri: http://localhost:8081/auth/userInfo
